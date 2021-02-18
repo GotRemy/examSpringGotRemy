@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"></meta>
+</head>
+<body>
+	<h1 th:utext="'Annonce numéro '+${annonce.id}+' de l\'application'"></h1>
+
+	<table style="border-width:1px; 
+			 border-style:solid; 
+			 border-color:black;
+			 border-collapse: collapse;">
+	    <thead style="background-color:grey;" >
+		            <th style="border: 1px solid black;">Id</th>
+		            <th style="border: 1px solid black;">Image</th>
+		            <th style="border: 1px solid black;">Contenu</th>
+		            <th style="border: 1px solid black;">Date de publication</th>
+		</thead>
+	    <tbody style="border: 1px solid black;">
+		        <tr style="border: 1px solid black;">
+		            <th scope="row" style="border: 1px solid black;" th:utext="${annonce.id}"></th>
+		            <td style="border: 1px solid black;" th:utext="${annonce.image}"></td>
+		            <td style="border: 1px solid black;" th:utext="${annonce.contenu}"></td>
+		            <td style="border: 1px solid black;" th:utext="${annonce.datePublication}"></td>
+		        </tr>
+		    </tbody>
+		</table>
+</body>
+</html>
